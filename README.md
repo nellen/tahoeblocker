@@ -1,16 +1,16 @@
-# Sonoma Blocker
+# Tahoe Blocker
 
-Blocking macOS 14 Sonoma installer
+Blocking macOS 14 Tahoe installer
 
-Detect when `Install macOS Sonoma.app` installer application has launched, terminate the process and display an alert.
+Detect when `Install macOS Tahoe.app` installer application has launched, terminate the process and display an alert.
 
-_This project is totally copied from the original `bigsurblocker` from which I made `montereyblocker`, then `venturablocker`, and now also `sonomablocker`._
+_This project is totally copied from the original `bigsurblocker` from which I made `montereyblocker`, then `venturablocker`, and now also Theile's `sonomablocker`._
 
 _See [hjuutilainen/bigsurblocker](https://github.com/hjuutilainen/bigsurblocker) for the original software for blocking Big Sur and README there._
 
-## Guide available
+~~## Guide available~~
 
-[HCS Technology Group](https://hcsonline.com) has made a guide available on how to set this up. [Read it here](https://docs.hcsonline.com/SonomaBlocker).
+~~[HCS Technology Group](https://hcsonline.com) has made a guide available on how to set this up. [Read it here](https://docs.hcsonline.com/SonomaBlocker).~~
 
 ## Why
 
@@ -18,11 +18,11 @@ Apple wants end users to upgrade to the latest macOS as soon as it becomes avail
 
 - Use an MDM to push a profile to delay updates for maximum of 90 days. This will however postpone _all_ updates, not just the macOS upgrade.
 
-But this option does not prevent users from downloading the full installer, and run that to upgrade their system, and this is where Sonoma Blocker fits in.
+But this option does not prevent users from downloading the full installer, and run that to upgrade their system, and this is where Tahoe Blocker fits in.
 
 ## How
 
-The `sonomablocker` binary is installed in `/usr/local/bin` and is launched for each user through a launch agent. This means that the binary is running in the user session and therefore has the privileges of the current user. It runs silently in the background and listens for app launch notifications. As soon as the user launches the macOS installer application, the binary (forcefully) terminates it and displays a warning message.
+The `Tahoeblocker` binary is installed in `/usr/local/bin` and is launched for each user through a launch agent. This means that the binary is running in the user session and therefore has the privileges of the current user. It runs silently in the background and listens for app launch notifications. As soon as the user launches the macOS installer application, the binary (forcefully) terminates it and displays a warning message.
 
 By design, it will _not_ block the `startosinstall` command line tool.
 
@@ -30,27 +30,27 @@ __This app only block the app installer, so in order to prevent the users from u
 
 ## Requirements
 
-The binary requires at least macOS 11.
+The binary requires at least macOS 15.
 
-## Management profiles
+~~## Management profiles~~
 
-All configuration is optional.
+~~All configuration is optional.~~
 
-Management profile for making sure [Blocker is not disabled by the user](Management%20profiles/sonomablocker%20profile.mobileconfig) (for MDM systems.)
+~~Management profile for making sure [Blocker is not disabled by the user](Management%20profiles/sonomablocker%20profile.mobileconfig) (for MDM systems.)~~
 
-Profile for [custom Blocker alert settings](Management%20profiles/dk.envo-it.sonomablocker.plist) (deployed as custom settings in a MDM system.)
+~~Profile for [custom Blocker alert settings](Management%20profiles/dk.envo-it.sonomablocker.plist) (deployed as custom settings in a MDM system.)~~
 
 ## Installation
 
-On macOS 11 and later, download a prebuilt package from the [Releases page](releases) and deploy with your favorite method. The package is signed and notarized.
+On macOS 15 and later, download a prebuilt package from the [Releases page](releases) and deploy with your favorite method. The package is signed and notarized.
 
 ## Uninstall
 
-To fully uninstall `sonomablocker`, run the script `[sonomablocker-remove.sh](sonomablocker-remove.sh)` (as root or with `sudo`) or deploy through MDM.
+To fully uninstall `tahoeblocker`, run the script `[tahoeblocker-remove.sh](tahoeblocker-remove.sh)` (as root or with `sudo`) or deploy through MDM.
 
 ## License
 
-Sonoma Blocker is licensed under [the MIT License](LICENSE), just as the original software.
+Tahoe Blocker is licensed under [the MIT License](LICENSE), just as the original software.
 
 
 
