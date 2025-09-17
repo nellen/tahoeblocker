@@ -1,9 +1,9 @@
 //
 //  main.m
-//  sonomablocker
+//  tahoeblocker
 //
 //  bigsurblocker created by Hannes Juutilainen on 18.10.2020.
-//  Modified for Sonoma by Søren Theilgaard on 2023-09-20
+//  Modified for Tahoe by Sebastian Nellen on 2025-09-17
 //
 
 #import <Foundation/Foundation.h>
@@ -37,15 +37,16 @@
 
         // Load our user defaults suite. This will allow the alert text
         // to be specified with a configuration profile
-        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"dk.envo-it.sonomablocker"];
+        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"dk.envo-it.tahoeblocker"];
 
         NSArray *bundleIDsToBlock = [userDefaults arrayForKey:@"bundleIDsToBlock"];
         if (!bundleIDsToBlock) {
             bundleIDsToBlock = @[
-                @"com.apple.InstallAssistant.Sonoma",
-                @"com.apple.InstallAssistant.macOSSonoma",
-                @"com.apple.InstallAssistant.Seed.macOS14Seed",
-                @"com.apple.InstallAssistant.Seed.macOS14Seed1",
+                @"com.apple.InstallAssistant.Tahoe",
+                @"com.apple.InstallAssistant.macOStahoe",
+                @"com.apple.InstallAssistant.Seed.macOS26Seed",
+                @"com.apple.InstallAssistant.Seed.macOS26Seed1",
+                @"com.apple.InstallAssistant.Seed.macOS26Seed*",
             ];
         }
         if ([bundleIDsToBlock containsObject:bundleID]) {
@@ -121,7 +122,7 @@
 
 - (BOOL)alertShowHelp:(NSAlert *)alert
 {
-    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"dk.envo-it.sonomablocker"];
+    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"dk.envo-it.tahoeblocker"];
     NSString *helpURLString = [userDefaults stringForKey:@"HelpURL"];
     if (helpURLString) {
         NSURL *helpURL = [NSURL URLWithString:helpURLString];

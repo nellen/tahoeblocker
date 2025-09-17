@@ -32,13 +32,13 @@ __This app only block the app installer, so in order to prevent the users from u
 
 The binary requires at least macOS 15.
 
-~~## Management profiles~~
+## Management profile
 
-~~All configuration is optional.~~
+All configuration is optional.
 
-~~Management profile for making sure [Blocker is not disabled by the user](Management%20profiles/sonomablocker%20profile.mobileconfig) (for MDM systems.)~~
+Management profile for making sure [Blocker is not disabled by the user](Management%20profiles/tahoeblocker%20profile.mobileconfig) (for MDM systems.)
 
-~~Profile for [custom Blocker alert settings](Management%20profiles/dk.envo-it.sonomablocker.plist) (deployed as custom settings in a MDM system.)~~
+Profile for [custom Blocker alert settings](Management%20profiles/dk.envo-it.tahoeblocker.plist) (deployed as custom settings in a MDM system.)
 
 ## Installation
 

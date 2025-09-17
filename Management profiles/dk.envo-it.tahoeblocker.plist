@@ -3,8 +3,8 @@
 <plist version="1.0">
   <dict>
     <key>AlertTitle</key>
-    <string>macOS 14 Sonoma installation prohibited</string>
+    <string>macOS 26 Tahoe installation prohibited</string>
     <key>AlertText</key>
-    <string>We do not currently support macOS 14 Sonoma in our configurations, so it has been blocked for installation until further notice.</string>
+    <string>We do not currently support macOS 26 Tahoe in our configurations, so it has been blocked for installation until further notice.</string>
   </dict>
 </plist>
